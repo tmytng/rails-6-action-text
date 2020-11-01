@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
 
+  # has_rich_textの追加
   has_rich_text :content
 
   validates :title, length: { maximum: 32 }, presence: true
