@@ -3,8 +3,8 @@ class Post < ApplicationRecord
   # has_rich_textの追加
   has_rich_text :content
 
+  # validation情報
   validates :title, length: { maximum: 32 }, presence: true
-
   validate :validate_content_attachement_byte_size
   validate :validate_content_length
   validate :validate_content_attachments_count
